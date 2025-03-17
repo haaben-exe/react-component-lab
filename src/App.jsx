@@ -45,13 +45,10 @@ const App = () => {
     <>
       <h1>Local Weather</h1>
       <section>
-        {weatherForecasts.map((weatherForecast) => (
+        {weatherForecasts.map((weatherForecast, idx) => (
           <WeeklyWeatherForecast 
-          day={weatherForecast.day}
-          image={weatherForecast.img}
-          conditions={weatherForecast.conditions}
-          time={weatherForecast.time}
-          img={weatherForecast.img}
+          key={idx} 
+          weatherForecast={weatherForecast}  
           />
         ))}
       </section>
